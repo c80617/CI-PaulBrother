@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A portfolio template that uses Material Design Lite.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>MDL-Static Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['bar']});
+  google.charts.setOnLoadCallback(drawStuff);
+
+  function drawStuff() {
+    var data = new google.visualization.arrayToDataTable([
+      ['', 'Percentage'],
+      ["不讓分", 73],
+      ["讓分盤", 54],
+      ["大小盤", 87]
+    ]);
+
+    var options = {
+      title: 'Chess opening moves',
+      width: 200,
+      legend: { position: 'none' },
+      chart: { title: '',
+               subtitle: '' },
+      bars: 'horizontal', // Required for Material Bar Charts.
+      axes: {
+        x: {
+          0: { side: 'top', label: ''} // Top x-axis.
+        }
+      },
+      bar: { groupWidth: "20%" }
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('Rays'));
+    chart.draw(data, options);
+
+    var data = new google.visualization.arrayToDataTable([
+      ['', 'Percentage'],
+      ["不讓分", 10],
+      ["讓分盤", 30],
+      ["大小盤", 50]
+    ]);
+    var chart = new google.charts.Bar(document.getElementById('Cardinals'));
+    chart.draw(data, options);
+    var chart = new google.charts.Bar(document.getElementById('WhiteSox'));
+    chart.draw(data, options);
+  };
+</script>
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header" style="background-image:url(images/header-bg.jpg)">
+            <div class="mdl-layout__header-row portfolio-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="portfolio-logo" style="background-image:url(images/logo.png)"></div>
+                    <span class="mdl-layout__title">Paul Brother</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link" href="/">FIFA</a>
+                    <a class="mdl-navigation__link is-active" href="/baseball">MLB</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+              <a class="mdl-navigation__link" href="/">FIFA</a>
+              <a class="mdl-navigation__link is-active" href="/baseball">MLB</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid portfolio-max-width">
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/Rays.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Angels @ Rays</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                          <div id="Rays" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="/Rays">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" src="images/logo/Cardinals.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Rockies @ Cardinals</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                      <div id="Cardinals" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/WhiteSox.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Royals	@ White Sox</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="WhiteSox" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/Nationals.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Reds	@ Nationals</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="Nationals" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/Phillies.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Marlins @ Phillies</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="Phillies" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/Mets.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Braves	@ Mets</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="Mets" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/RedSox.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Yankees	@ Red Sox</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="RedSox" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/Rangers.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Orioles	@ Rangers</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="Rangers" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/Cubs.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Padres	@ Cubs</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="Cubs" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/Dodgers.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Brewers @ Dodgers</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="Dodgers" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/D-backs.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Giants	@ D-backs</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="D-backs" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media">
+                        <img class="article-image" src="images/logo/Mariners.jpg" border="0" alt="">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">Blue Jays	@ Mariners</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <div id="Mariners" style="width: 200px; height: 200px;"></div>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Simple portfolio website</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Privacy & Terms</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</body>
+
+</html>

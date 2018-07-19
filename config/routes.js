@@ -25,9 +25,12 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/':                   {view: 'pages/homepage'},
-  'GET /basketball':     {view: 'pages/basketball' },
+  'GET /baseball':       {view: 'pages/baseball' },
   'GET /about':          {view: 'pages/about' },
-  'GET /contact':        {view: 'pages/contact' }
+  'GET /contact':        {view: 'pages/contact' },
+  'GET /Rays':           {view: 'pages/Rays' },
+  'GET /fifa1':          {view: 'pages/fifa1' },
+  'GET /fifa2':          {view: 'pages/fifa2' }
   /***************************************************************************
   *                                                                          *
   * More custom routes here...                                               *

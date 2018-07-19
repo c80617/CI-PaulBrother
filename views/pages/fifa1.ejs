@@ -29,30 +29,62 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['bar']});
+  google.charts.setOnLoadCallback(drawStuff);
+
+  function drawStuff() {
+    var data = new google.visualization.arrayToDataTable([
+      ['', 'Percentage'],
+      ["不讓分", 73],
+      ["讓分盤", 54],
+      ["大小盤", 87]
+    ]);
+
+    var options = {
+      title: 'Chess opening moves',
+      width: 200,
+      legend: { position: 'none' },
+      chart: { title: '',
+               subtitle: '' },
+      bars: 'horizontal', // Required for Material Bar Charts.
+      axes: {
+        x: {
+          0: { side: 'top', label: ''} // Top x-axis.
+        }
+      },
+      bar: { groupWidth: "20%" }
+    };
+
+    var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+    chart.draw(data, options);
+    var chart = new google.charts.Bar(document.getElementById('top_x_div2'));
+    chart.draw(data, options);
+    var chart = new google.charts.Bar(document.getElementById('top_x_div3'));
+    chart.draw(data, options);
+  };
+</script>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header" style="background-image:url(images/header-bg.jpg)">
             <div class="mdl-layout__header-row portfolio-logo-row">
                 <span class="mdl-layout__title">
-                    <div class="portfolio-logo"></div>
-                    <span class="mdl-layout__title">Simple portfolio website</span>
+                    <div class="portfolio-logo" style="background-image:url(images/logo.png)"></div>
+                    <span class="mdl-layout__title">Paul Brother</span>
                 </span>
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link" href="index.html">Portfolio</a>
-                    <a class="mdl-navigation__link" href="blog.html">Blog</a>
-                    <a class="mdl-navigation__link is-active" href="about.html">About</a>
-                    <a class="mdl-navigation__link" href="contact.html">Contact</a>
+                    <a class="mdl-navigation__link is-active" href="/">FIFA</a>
+                    <a class="mdl-navigation__link" href="/baseball">MLB</a>
                 </nav>
             </div>
         </header>
         <div class="mdl-layout__drawer mdl-layout--small-screen-only">
             <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                <a class="mdl-navigation__link is-active" href="index.html">Portfolio</a>
-                <a class="mdl-navigation__link" href="blog.html">Blog</a>
-                <a class="mdl-navigation__link" href="about.html">About</a>
-                <a class="mdl-navigation__link" href="contact.html">Contact</a>
+              <a class="mdl-navigation__link is-active" href="/">FIFA</a>
+              <a class="mdl-navigation__link" href="/baseball">MLB</a>
             </nav>
         </div>
         <main class="mdl-layout__content">
@@ -60,30 +92,17 @@
 
                 <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">About</h2>
+                        <h2 class="mdl-card__title-text">法國 - 克羅埃西亞</h2>
                     </div>
                     <div class="mdl-card__media">
-                        <img class="article-image" src=" images/about-header.jpg" border="0" alt="">
+                        <img class="article-image" src=" images/logo/fifa.jpg" style="width:50%" border="0" alt="">
                     </div>
 
                     <div class="mdl-grid portfolio-copy">
                         <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introduction</h3>
-                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-                            <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat. Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
-                            </p>
-                        </div>
+                        <div id="top_x_div" style="width: 200px; height: 200px;"></div>
 
 
-
-
-                        <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Irure mollit est sit labore</h3>
-
-                        <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-                            <p>
-                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet. Voluptate voluptate irure occaecat deserunt incididunt esse in. Sunt velit aliquip sunt elit ex nulla reprehenderit qui ut eiusmod ipsum do. Duis veniam reprehenderit laborum occaecat id proident nulla veniam. Duis enim deserunt voluptate aute veniam sint pariatur exercitation. Irure mollit est sit labore est deserunt pariatur duis aute laboris cupidatat. Consectetur consequat esse est sit veniam adipisicing ipsum enim irure.
-                            </p>
-                        </div>
                     </div>
                 </div>
 
