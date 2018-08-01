@@ -12,48 +12,265 @@
     <link rel="stylesheet" href="/assets/styles/styles.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-  google.charts.load('current', {'packages':['bar']});
-  google.charts.setOnLoadCallback(drawStuff);
+    <script type="text/javascript">
+      google.charts.load('visualization', '1.1', {packages: ['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['華盛頓國民', 49,'color: #b0120a'],
+          ['紐約大都會隊', 51,'color: #004411'],
+        ]);
 
-  function drawStuff() {
-    var data = new google.visualization.arrayToDataTable([
-      ['', 'Percentage'],
-      ["不讓分", 73],
-      ["讓分盤", 54],
-      ["大小盤", 87]
-    ]);
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('1'));
+        chart.draw(data, options);
 
-    var options = {
-      title: 'Chess opening moves',
-      width: 200,
-      legend: { position: 'none' },
-      chart: { title: '',
-               subtitle: '' },
-      bars: 'horizontal', // Required for Material Bar Charts.
-      axes: {
-        x: {
-          0: { side: 'top', label: ''} // Top x-axis.
-        }
-      },
-      bar: { groupWidth: "20%" }
-    };
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['紐約洋基', 70,'color: #b0120a'],
+          ['巴爾的摩金鶯', 30,'color: #004411'],
+        ]);
 
-    var chart = new google.charts.Bar(document.getElementById('Rays'));
-    chart.draw(data, options);
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('2'));
+        chart.draw(data, options);
 
-    var data = new google.visualization.arrayToDataTable([
-      ['', 'Percentage'],
-      ["不讓分", 10],
-      ["讓分盤", 30],
-      ["大小盤", 50]
-    ]);
-    var chart = new google.charts.Bar(document.getElementById('Cardinals'));
-    chart.draw(data, options);
-    var chart = new google.charts.Bar(document.getElementById('WhiteSox'));
-    chart.draw(data, options);
-  };
-</script>
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['底特律老虎', 50,'color: #b0120a'],
+          ['辛辛那提紅人', 50,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('3'));
+        chart.draw(data, options);
+
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['明尼蘇達雙城', 37,'color: #b0120a'],
+          ['克裡夫藍印地安人', 63,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('4'));
+        chart.draw(data, options);
+
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['奧克蘭運動家', 55,'color: #b0120a'],
+          ['多倫多藍鳥', 45,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('5'));
+        chart.draw(data, options);
+
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['西雅圖水手', 44,'color: #b0120a'],
+          ['休士頓太空人', 56,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('6'));
+        chart.draw(data, options);
+
+
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['匹茨堡海盜隊', 47,'color: #b0120a'],
+          ['芝加哥小熊', 53,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('7'));
+        chart.draw(data, options);
+
+
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['坦帕灣光芒', 49,'color: #b0120a'],
+          ['洛杉磯天使', 51,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('8'));
+        chart.draw(data, options);
+
+
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['亞特蘭大勇士', 61,'color: #b0120a'],
+          ['邁阿密馬林魚', 39,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('9'));
+        chart.draw(data, options);
+
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['芝加哥白襪', 51,'color: #b0120a'],
+          ['堪薩斯皇家', 49,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('10'));
+        chart.draw(data, options);
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['聖路易紅雀', 53,'color: #b0120a'],
+          ['科羅拉多洛磯', 47,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('11'));
+        chart.draw(data, options);
+        var data = google.visualization.arrayToDataTable([
+          ['Class', 'Total',{role: 'style'}],
+          ['洛杉磯道奇', 59,'color: #b0120a'],
+          ['密爾瓦基釀酒人', 41,'color: #004411'],
+        ]);
+
+        var options = {
+          isStacked: true,
+          title: '兩隊勝率',
+          legend: { position: 'none' },
+          bars: 'horizontal',
+          bar: { groupWidth: "20%" },
+          axes: {
+            x: {
+              0: { side: 'top', label: ''} // Top x-axis.
+            }
+          }
+         };
+        var chart = new google.visualization.ColumnChart(document.getElementById('12'));
+        chart.draw(data, options);
+
+      }
+    </script>
 </head>
 
 <body>
@@ -80,174 +297,144 @@
         </div>
         <main class="mdl-layout__content">
             <div class="mdl-grid portfolio-max-width">
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/Rays.jpg" border="0" alt="">
+                        <img class="article-image" style="height: 100px;" src="images/logo/1.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Angels @ Rays</h2>
+                        <h2 class="mdl-card__title-text">華盛頓國民 @ 紐約大都會隊</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                          <div id="Rays" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="/Rays">Read more</a>
+                          <div id="1" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
                     <div class="mdl-card__media" style="background-color:white;">
-                        <img class="article-image" src="images/logo/Cardinals.jpg" border="0" alt="">
+                        <img class="article-image" style="height: 100px;" src="images/logo/2.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Rockies @ Cardinals</h2>
+                        <h2 class="mdl-card__title-text">紐約洋基 @ 巴爾的摩金鶯</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                      <div id="Cardinals" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="2" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/WhiteSox.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/3.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Royals	@ White Sox</h2>
+                        <h2 class="mdl-card__title-text">底特律老虎 @ 辛辛那提紅人</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="WhiteSox" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="3" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/Nationals.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/4.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Reds	@ Nationals</h2>
+                        <h2 class="mdl-card__title-text">明尼蘇達雙城	@ 克裡夫藍印地安人</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="Nationals" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="4" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/Phillies.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/5.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Marlins @ Phillies</h2>
+                        <h2 class="mdl-card__title-text">奧克蘭運動家	@ 多倫多藍鳥</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="Phillies" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="5" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/Mets.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/6.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Braves	@ Mets</h2>
+                        <h2 class="mdl-card__title-text">西雅圖水手	@ 休士頓太空人</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="Mets" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="6" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/RedSox.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/7.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Yankees	@ Red Sox</h2>
+                        <h2 class="mdl-card__title-text">匹茨堡海盜隊	@ 芝加哥小熊</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="RedSox" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="7" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/Rangers.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/8.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Orioles	@ Rangers</h2>
+                        <h2 class="mdl-card__title-text">坦帕灣光芒	@ 洛杉磯天使</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="Rangers" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="8" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/Cubs.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/9.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Padres	@ Cubs</h2>
+                        <h2 class="mdl-card__title-text">亞特蘭大勇士	@ 邁阿密馬林魚</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="Cubs" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="9" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/Dodgers.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/10.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Brewers @ Dodgers</h2>
+                        <h2 class="mdl-card__title-text">芝加哥白襪	@ 堪薩斯皇家</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="Dodgers" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="10" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/D-backs.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/11.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Giants	@ D-backs</h2>
+                        <h2 class="mdl-card__title-text">聖路易紅雀	@ 科羅拉多洛磯</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="D-backs" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="11" style="height: 200px;"></div>
                     </div>
                 </div>
-                <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
-                    <div class="mdl-card__media">
-                        <img class="article-image" src="images/logo/Mariners.jpg" border="0" alt="">
+                <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp portfolio-card">
+                    <div class="mdl-card__media" style="background-color:white;">
+                        <img class="article-image" style="height: 100px;" src="images/logo/12.png" border="0" alt="">
                     </div>
                     <div class="mdl-card__title">
-                        <h2 class="mdl-card__title-text">Blue Jays	@ Mariners</h2>
+                        <h2 class="mdl-card__title-text">洛杉磯道奇	@ 密爾瓦基釀酒人</h2>
                     </div>
                     <div class="mdl-card__supporting-text">
-                        <div id="Mariners" style="width: 200px; height: 200px;"></div>
-                    </div>
-                    <div class="mdl-card__actions mdl-card--border">
-                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+                      <div id="12" style="height: 200px;"></div>
                     </div>
                 </div>
+
+
+
+
+
+
             </div>
             <footer class="mdl-mini-footer">
                 <div class="mdl-mini-footer__left-section">
